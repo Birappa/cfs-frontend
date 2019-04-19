@@ -1,0 +1,17 @@
+.column {
+    width: 70%;
+    margin-left: 15%;
+}
+
+.rating {
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    width: 4%;
+}
+
+.blur {
+    color: #757575;
+    font-size: 14px;
+}

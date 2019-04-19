@@ -1,0 +1,38 @@
+<app-header></app-header>
+
+<div class="row">
+    <div class="column shadow p-3 mb-5 bg-white rounded">
+        <h2>Amazon Web Service Cloud</h2>
+        <p>Ajay Kumar Lodha</p>
+        <p><span class="rating">4.1</span> <span class="blur"> 200 ratings</span></p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="column shadow p-3 mb-5 bg-white rounded">
+        <h2>Redhat Openshift Cluster</h2>
+        <p>Vino Alex</p>
+        <p><span class="rating">4.1</span> <span class="blur"> 200 ratings</span></p>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="column shadow p-3 mb-5 bg-white rounded">
+        <h2>Amazon Web Service Cloud</h2>
+        <p>Ajay Kumar Lodha</p>
+        <p><span class="rating">4.1</span> <span class="blur"> 200 ratings</span></p>
+    </div>
+</div>
+
+<div *ngFor="let feedbackRating of feedbackRatings">
+    <div class="row">
+        <div class="column shadow p-3 mb-5 bg-white rounded">
+            <h2>{{feedbackRating.titleOfTraining}}</h2>
+            <p>{{feedbackRating.trainerName}}</p>
+            <p><span class="rating">{{feedbackRating.ratings}}</span> <span class="blur"> 200 ratings</span></p>
+
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

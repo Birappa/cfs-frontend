@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-sm navbar-dark shadow p-3 mb-5 bg-white rounded">
+    <div class="container-fluid">
+        <a class="navbar-brand" [routerLink]="['/home']">
+            <img src="/assets/logo.png" alt="logo" style="width:150px;">
+        </a>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+
+                <a id="username" *ngIf="visibility">Welcome {{username}}</a>
+                <a [routerLink]="['/login']" (click)="logout()" *ngIf="visibility">logout</a>
+                <a [routerLink]="['/login']" *ngIf="!visibility">login</a>
+            </li>
+        </ul>
+    </div>
+</nav>

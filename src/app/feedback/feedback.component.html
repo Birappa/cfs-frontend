@@ -1,0 +1,57 @@
+<app-header></app-header>
+
+<div class="row d-flex justify-content-center">
+    <div class="col-md-8 shadow p-3 mb-5 bg-white rounded">
+
+        <div>
+            <p>
+                <span class="font-weight-bold" style="font-size:24px;">{{feedbackObject.titleOfTraining}}</span>
+                <span class="float-right font-weight-light">End date: {{feedbackObject.endDate | date}}</span>
+                <span class="float-right font-weight-light right">Start date: {{feedbackObject.startDate | date}}</span>
+            </p>
+            <p>{{feedbackObject.trainerName}}</p>
+        </div>
+        <hr>
+        <div>
+            <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit">
+                <div>
+                    <p formControlName="question1">{{feedbackObject.question1}}</p>
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="answer1" formControlName="answer1"> Very poor
+                      </label>
+                    </div>
+
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="answer1" formControlName="answer1">Poor
+                        </label>
+                    </div>
+
+                    <div class="form-check-inline disabled">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="answer1" formControlName="answer1">Good
+                        </label>
+                    </div>
+
+                    <div class="form-check-inline disabled">
+                        <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="answer1" formControlName="answer1">Very good
+                        </label>
+                    </div>
+
+                    <div class="form-check-inline disabled">
+                        <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="answer1" formControlName="answer1">Excellent
+                            </label>
+                    </div>
+
+                </div>
+
+                <div><input type="number" formControlName="ratings" placeholder="Enter rating for trainer"></div>
+                <button class="btn btn-success float-right">submit</button>
+            </form>
+        </div>
+
+    </div>
+</div>

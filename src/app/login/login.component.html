@@ -1,0 +1,34 @@
+<div class="row d-flex justify-content-center">
+
+    <div class="col-md-4 shadow p-3 mb-5 bg-white rounded">
+        <h2 style="margin-left: 30%;padding: 20px">Login </h2>
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+            <div class="form-group">
+                <select formControlName="role" class="form-control" (change)="checkRole()">
+                    <option value="" disabled hidden>Select Role</option>
+                    <option value="employee">Employee</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" formControlName="empId" id="empId" autocomplete="off" placeholder="Employee Id">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" formControlName="password" id="password" autocomplete="off" placeholder="Password">
+            </div>
+
+            <button type="submit" class="btn btn-success form-control" [disabled]="!loginForm.valid">Login</button>
+
+            <p style="padding:7px;"><a routerLink="/signup" routerLinkActive="active" *ngIf="visibility">Create an
+                    account</a>
+                <a class="float-right" routerLink="/home" routerLinkActive="active">Cancel</a>
+            </p>
+            <div *ngIf="invalidLogin" class="error">
+                <div>Invalid credentials.</div>
+            </div>
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<app-header></app-header>
+
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-8 shadow p-3 mb-5 bg-white rounded">
+            <p>Feedback Form</p>
+
+            <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <input type="text" class="form-control " formControlName="titleOfTraining" id="title" autocomplete="off" placeholder="Title">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" formControlName="trainerName" id="name" autocomplete="off" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <input type="date" class="form-control" formControlName="startDate" id="startDate" autocomplete="off" placeholder="Start date">
+                </div>
+                <div class="form-group">
+                    <input type="date" class="form-control" formControlName="endDate" id="endDate" autocomplete="off" placeholder="End date">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" formControlName="daysSurveyAvailable" id="numberOfDays" autocomplete="off" placeholder="Number of days survey form availabe">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" formControlName="question1" id="question1" autocomplete="off" placeholder="Enter question">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" formControlName="question2" id="question2" autocomplete="off" placeholder="Enter question">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" formControlName="question3" id="question3" autocomplete="off" placeholder="Enter question">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" formControlName="question4" id="question4" autocomplete="off" placeholder="Enter question">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" formControlName="question5" id="question5" autocomplete="off" placeholder="Enter question">
+                </div>
+
+                <div><button type="submit" class="btn btn-success">send</button></div>
+            </form>
+        </div>
+
+    </div>
+
+</div>

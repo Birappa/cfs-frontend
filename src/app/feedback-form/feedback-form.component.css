@@ -1,0 +1,14 @@
+input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid lightgray;
+}
+
+input:focus {
+    box-shadow: none;
+}
+
+.remove {
+    float: right;
+}

@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div class="row d-flex justify-content-center">
+    <div class="col-md-8  p-3 mb-5 bg-white ">
+        <p><span>Welcome To Capgemini Feedback System</span><a [routerLink]="['/feedback-form']" class="float-right">create survey</a></p>
+        <hr>
+    </div>
+</div>
+
+
+<div *ngFor="let feedback of feedbackList">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-8 shadow p-3 mb-5 bg-white rounded">
+            <p>
+                <span class="title">{{feedback.titleOfTraining}}</span>
+                <span class="float-right font-weight-light">End date: {{feedback.endDate | date}}</span>
+                <span class="float-right font-weight-light right">Start date: {{feedback.startDate | date}}</span>
+            </p>
+            <p>{{feedback.trainerName}}<a href="#" class="float-right">preview</a></p>
+        </div>
+    </div>
+</div>
